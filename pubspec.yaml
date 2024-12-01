@@ -1,0 +1,21 @@
+name: flex
+description: The Jaspr UI Toolkit for Flutter developers
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  jaspr: ^0.16.2
+  jaspr_router: ^0.6.0
+
+dev_dependencies:
+  build_runner: ^2.4.0
+  jaspr_web_compilers: ^4.0.10+1
+  jaspr_builder: ^0.16.2
+  jaspr_lints: ^0.1.2
+  lints: ^3.0.0
+
+jaspr:
+  mode: server
