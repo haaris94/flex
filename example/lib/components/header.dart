@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
 import '../constants/theme.dart';
-import 'package:flex/flex.dart';
 
 class Header extends StatelessComponent {
   const Header({super.key});
@@ -12,18 +11,15 @@ class Header extends StatelessComponent {
     var activePath = context.binding.currentUri.path;
 
     yield header([
-      Padd(
-        padding: EdgeInsets.all(10.em),
-        child: nav([
-          for (var route in [
-            (label: 'Home', path: '/'),
+      nav([
+        for (var route in [
+          (label: 'Home', path: '/'),
           (label: 'About', path: '/about'),
         ])
           div(classes: activePath == route.path ? 'active' : null, [
             Link(to: route.path, child: text(route.label)),
-            ]),
-        ]),
-      ),
+          ]),
+      ]),
     ]);
   }
 
